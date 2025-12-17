@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// ALGORITMO DE ORDENAMIENTO PARA LISTAS DE HASTA 100 ELEMENTOS
 void	sort_100(t_list *data)
 {
 	data->lsp = data->argc - 1;
@@ -29,7 +28,6 @@ void	sort_100(t_list *data)
 		order_numbers_aux(data);
 }
 
-// ALGORITMO DE ORDENAMIENTO PARA LISTAS DE HASTA 500 ELEMENTOS
 void	sort_500(t_list *data)
 {
 	data->lsp = data->argc - 1;
@@ -43,7 +41,6 @@ void	sort_500(t_list *data)
 	order_numbers(data);
 }
 
-// ORDENA UNA COPIA DE LOS NÚMEROS USANDO BURBUJA PARA NORMALIZAR
 void	sort_numbers(t_list *data)
 {
 	int	pos;
@@ -66,7 +63,6 @@ void	sort_numbers(t_list *data)
 	}
 }
 
-// TRANSFORMA LOS NÚMEROS ORIGINALES EN ÍNDICES NORMALIZADOS SEGÚN SU ORDEN
 void	normalize_numbers(t_list *data)
 {
 	int	pos_sa;

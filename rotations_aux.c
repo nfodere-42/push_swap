@@ -14,7 +14,6 @@
 
 // ...[rotations.c]
 
-// AUXILIAR QUE ROTA HACIA ABAJO EL STACK A
 static void	rrr_aux(t_list *data)
 {
 	int	last;
@@ -33,7 +32,6 @@ static void	rrr_aux(t_list *data)
 	}
 }
 
-//  ROTACIÓN HACIA ABAJO SIMULTÁNEA DE LOS STACKS A Y B
 void	rrr(t_list *data)
 {
 	int	last;

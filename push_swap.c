@@ -26,7 +26,7 @@ int	init_data(t_list *data)
 {
 	data->sa = malloc(sizeof(int) * data->argc);
 	if (!data->sa)
-		return (write(2, "Error\n", 6), free(data), -1);
+		return (free(data), -1);
 	data->sp = malloc(sizeof(int) * data->argc);
 	if (!data->sp)
 		return (free(data->sa), free(data), -1);

@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// CONVIERTE UNA CADENA EN ENTERO
 int	ft_atoi(const char *str, t_list *data)
 {
 	long long	num;
@@ -39,13 +38,11 @@ int	ft_atoi(const char *str, t_list *data)
 	return ((int)(num * sign));
 }
 
-// VERIFICA SI UN CARÁCTER ES UN DÍGITO DECIMAL
 int	ft_isdigit(int chr)
 {
 	return (chr >= '0' && chr <= '9');
 }
 
-// CALCULA LA LONGITUD DE UNA CADENA
 int	ft_strlen(char *str)
 {
 	int	len;
@@ -56,7 +53,6 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
-// CREA UNA SUBCADENA DESDE UNA POSICIÓN Y LONGITUD DADAS
 char	*ft_substr(char *str, int pos, int len)
 {
 	char	*copy;

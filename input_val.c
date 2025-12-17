@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// REVISA QUE TODOS LOS ARGUMENTOS SEAN VÁLIDOS NÚMEROS
 int	check_args(char **args, int argc)
 {
 	int	index;
@@ -27,7 +26,6 @@ int	check_args(char **args, int argc)
 	return (0);
 }
 
-// COMPRUEBA SI UNA CADENA REPRESENTA UN NÚMERO ENTERO CORRECTO
 int	check_num(char *str)
 {
 	int	count;
@@ -52,7 +50,6 @@ int	check_num(char *str)
 	return (-1);
 }
 
-// VERIFICA SI LA LISTA YA ESTÁ ORDENADA
 int	check_order(t_list *data)
 {
 	int	pos;
@@ -71,7 +68,6 @@ int	check_order(t_list *data)
 	return (0);
 }
 
-// REVISA SI UN NÚMERO YA EXISTE EN EL STACK HASTA UNA POSICIÓN DADA
 static int	check_duplicate_limit(t_list *data, int num, int pos)
 {
 	int	index;
@@ -86,7 +82,6 @@ static int	check_duplicate_limit(t_list *data, int num, int pos)
 	return (1);
 }
 
-// DETECTA SI HAY NÚMEROS REPETIDOS EN EL STACK
 int	check_duplicates(t_list *data)
 {
 	int	pos;

@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// LIBERA TODA LA MEMORIA DE LAS PILAS Y FINALIZA MOSTRANDO ERROR
 void	free_data(t_list *data)
 {
 	if (data->sa)
@@ -27,7 +26,6 @@ void	free_data(t_list *data)
 	exit(0);
 }
 
-// LIBERA TODA LA MEMORIA DE FORMA SEGURA
 void	free_data_safe(t_list *data)
 {
 	if (data->sa)
@@ -53,7 +51,6 @@ void	free_data_safe(t_list *data)
 	exit(0);
 }
 
-// MARCA ERROR EN LA CONVERSIÓN DE ENTEROS Y DEVUELVE CERO
 int	error_exit(t_list *data, int num)
 {
 	return (num = 0, data->atoierror = 1, num);

@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// INTERCAMBIA LOS DOS PRIMEROS ELEMENTOS DEL STACK A
 void	sa(int *sa)
 {
 	int	tmp;
@@ -23,7 +22,6 @@ void	sa(int *sa)
 	write(1, "sa\n", 3);
 }
 
-// INTERCAMBIA LOS DOS PRIMEROS ELEMENTOS DEL STACK B
 void	sb(int *sb)
 {
 	int	tmp;
@@ -34,7 +32,6 @@ void	sb(int *sb)
 	write(1, "sb\n", 3);
 }
 
-// MUEVE EL PRIMER ELEMENTO DEL STACK B AL STACK A
 void	pa(t_list *data)
 {
 	int	pos;
@@ -57,7 +54,6 @@ void	pa(t_list *data)
 	write(1, "pa\n", 3);
 }
 
-// MUEVE EL PRIMER ELEMENTO DEL STACK A AL STACK B
 void	pb(t_list *data)
 {
 	int	pos;
@@ -80,7 +76,6 @@ void	pb(t_list *data)
 	write(1, "pb\n", 3);
 }
 
-// INTERCAMBIA EL VALOR DE DOS ENTEROS
 void	swap(int *a, int *b)
 {
 	int	tmp;

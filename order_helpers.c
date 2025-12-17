@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// ORDENA LOS NÚMEROS DIVIDIÉNDOLOS EN BLOQUES Y PASÁNDOLOS AL STACK B
 void	order_numbers(t_list *data)
 {
 	int	pos;
@@ -37,7 +36,6 @@ void	order_numbers(t_list *data)
 	order_sb(data);
 }
 
-// REORDENA EL STACK B DEVOLVIENDO ELEMENTOS AL STACK A EN ORDEN CORRECTO
 void	order_sb(t_list *data)
 {
 	while (data->sib > 0)
@@ -52,7 +50,6 @@ void	order_sb(t_list *data)
 	}
 }
 
-// ROTA EL STACK B HASTA QUE EL ELEMENTO MÁXIMO ESTÉ ARRIBA
 void	order_sb_rotate(t_list *data)
 {
 	int	pos;
@@ -72,7 +69,6 @@ void	order_sb_rotate(t_list *data)
 	}
 }
 
-// VERSIÓN SIMPLIFICADA DE order_numbers()
 void	order_numbers_aux(t_list *data)
 {
 	while (data->sia > 0)

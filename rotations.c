@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// ROTACIÓN HACIA ARRIBA DEL STACK A
 void	ra(t_list *data)
 {
 	int	pos;
@@ -26,7 +25,6 @@ void	ra(t_list *data)
 	write(1, "ra\n", 3);
 }
 
-// ROTACIÓN HACIA ARRIBA DEL STACK B
 void	rb(t_list *data)
 {
 	int	pos;
@@ -40,7 +38,6 @@ void	rb(t_list *data)
 	write(1, "rb\n", 3);
 }
 
-// ROTACIÓN SIMULTÁNEA HACIA ARRIBA DE LOS STACKS A Y B
 void	rr(t_list *data)
 {
 	int	pos;
@@ -60,7 +57,6 @@ void	rr(t_list *data)
 	write(1, "rr\n", 3);
 }
 
-// ROTACIÓN HACIA ABAJO DEL STACK A
 void	rra(t_list *data)
 {
 	int	pos;
@@ -74,7 +70,6 @@ void	rra(t_list *data)
 	write(1, "rra\n", 4);
 }
 
-// ROTACIÓN HACIA ABAJO DEL STACK B
 void	rrb(t_list *data)
 {
 	int	pos;
@@ -89,7 +84,6 @@ void	rrb(t_list *data)
 }
 
 /*
-// AUXILIAR QUE ROTA HACIA ABAJO EL STACK A
 void	rrr_aux(t_list *data)
 {
 	int	last;
@@ -108,7 +102,6 @@ void	rrr_aux(t_list *data)
 	}
 }
 
-//  ROTACIÓN HACIA ABAJO SIMULTÁNEA DE LOS STACKS A Y B
 void	rrr(t_list *data)
 {
 	int	last;

@@ -12,7 +12,6 @@
 
 #include "push_swap.h"
 
-// ORDENA LISTAS DE 3 CON MOVIMIENTOS ÓPTIMOS
 void	sort_3(int *a, t_list *data)
 {
 	if (data->argc == 2 && a[0] > a[1])
@@ -35,7 +34,6 @@ void	sort_3(int *a, t_list *data)
 	}
 }
 
-// ORDENA LISTAS DE 4 , MUEVE EL MENOR AL STACK B Y ORDENA EL RESTO
 void	sort_4(int *a, t_list *data)
 {
 	if (data->sia == 4)
@@ -64,7 +62,6 @@ void	sort_4(int *a, t_list *data)
 	pa(data);
 }
 
-// AUXILIAR PARA DETECTAR Y MOVER EL MENOR EN LISTAS DE 5 ELEMENTOS
 static int	sort_5_aux(int *a, t_list *data, int pos)
 {
 	if (a[2] < a[0] && a[2] < a[1] && a[2] < a[3] && a[2] < a[4] && pos == 0)
@@ -92,7 +89,6 @@ static int	sort_5_aux(int *a, t_list *data, int pos)
 	return (pos);
 }
 
-// ORDENA LISTAS DE 5 ELEMENTOS USANDO EL AUXILIAR Y ORDENANDO EL RESTO
 void	sort_5(int *a, t_list *data)
 {
 	int	pos;
