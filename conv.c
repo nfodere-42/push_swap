@@ -53,22 +53,38 @@ int	ft_strlen(char *str)
 	return (len);
 }
 
+static char	*ft_substr_aux(void)
+{
+	char	*copy;
+
+	copy = malloc(1);
+	if (!copy)
+		return (NULL);
+	copy[0] = '\0';
+	return (copy);
+}
+
 char	*ft_substr(char *str, int pos, int len)
 {
 	char	*copy;
-	int		count;
+	int		str_len;
+	int		to_copy;
+	int		index;
 
-	count = 0;
 	if (!str)
-		return (0);
-	if (len > ft_strlen(str))
-		copy = malloc(sizeof(char) * (ft_strlen(str) + 1));
+		return (NULL);
+	str_len = ft_strlen(str);
+	if (pos >= str_len)
+		return (ft_substr_aux());
+	if (len < (str_len - pos))
+		to_copy = len;
 	else
-		copy = malloc(sizeof(char) * (len + 1));
+		to_copy = str_len - pos;
+	copy = malloc(sizeof(char) * (to_copy + 1));
 	if (!copy)
-		return (0);
-	while (pos < ft_strlen(str) && count < len && str[pos])
-		copy[count++] = str[pos++];
-	copy[count] = '\0';
-	return (copy);
+		return (NULL);
+	index = 0;
+	while (index < to_copy)
+		copy[index++] = str[pos++];
+	return (copy[index] = '\0', copy);
 }

@@ -38,8 +38,8 @@ typedef struct s_list
 
 void	free_data(t_list *data);
 void	free_data_safe(t_list *data);
-void	sa(int *sa);
-void	sb(int *sb);
+void	sa(t_list *data);
+void	sb(t_list *data);
 void	pa(t_list *data);
 void	pb(t_list *data);
 void	swap(int *a, int *b);
@@ -63,7 +63,7 @@ void	order_numbers_aux(t_list *data);
 char	*ft_substr(char *str, int pos, int len);
 int		init_data(t_list *data);
 int		args_to_int(t_list *data, int argc, char **args);
-int		choose_algorithm(int argc, t_list *data);
+int		choose_algoritm(int argc, t_list *data);
 int		check_args(char **args, int argc);
 int		check_num(char *str);
 int		check_order(t_list *data);

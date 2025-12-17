@@ -33,7 +33,8 @@ int	check_num(char *str)
 
 	count = 0;
 	pos = 0;
-	if ((str[pos] == '-' && (str[pos + 1] >= '0' && str[pos + 1] <= '9'))
+	if (((str[pos] == '-' || str[pos] == '+')
+			&& (str[pos + 1] >= '0' && str[pos + 1] <= '9'))
 		|| (str[pos] >= '0' && str[pos] <= '9'))
 	{
 		count++;

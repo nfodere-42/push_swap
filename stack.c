@@ -12,23 +12,27 @@
 
 #include "push_swap.h"
 
-void	sa(int *sa)
+void	sa(t_list *data)
 {
 	int	tmp;
 
-	tmp = sa[0];
-	sa[0] = sa[1];
-	sa[1] = tmp;
+	if (data->sia < 2 || !data)
+		return ;
+	tmp = data->sa[0];
+	data->sa[0] = data->sa[1];
+	data->sa[1] = tmp;
 	write(1, "sa\n", 3);
 }
 
-void	sb(int *sb)
+void	sb(t_list *data)
 {
 	int	tmp;
 
-	tmp = sb[0];
-	sb[0] = sb[1];
-	sb[1] = tmp;
+	if (data->sib < 2 || !data)
+		return ;
+	tmp = data->sb[0];
+	data->sb[0] = data->sb[1];
+	data->sb[1] = tmp;
 	write(1, "sb\n", 3);
 }
 
@@ -36,21 +40,23 @@ void	pa(t_list *data)
 {
 	int	pos;
 
+	if (data->sib <= 0 || !data)
+		return ;
 	pos = data->sia;
-	data->sib--;
-	data->sia++;
 	while (pos > 0)
 	{
-		swap(&data->sa[pos], &data->sa[pos - 1]);
+		data->sa[pos] = data->sa[pos - 1];
 		pos--;
 	}
 	data->sa[0] = data->sb[0];
 	pos = 0;
-	while (pos <= data->sib)
+	while (pos < data->sib - 1)
 	{
 		data->sb[pos] = data->sb[pos + 1];
 		pos++;
 	}
+	data->sib -= 1;
+	data->sia += 1;
 	write(1, "pa\n", 3);
 }
 
@@ -58,21 +64,23 @@ void	pb(t_list *data)
 {
 	int	pos;
 
+	if (data->sia <= 0 || !data)
+		return ;
 	pos = data->sib;
-	data->sib++;
-	data->sia--;
 	while (pos > 0)
 	{
-		swap(&data->sb[pos], &data->sb[pos - 1]);
+		data->sb[pos] = data->sb[pos - 1];
 		pos--;
 	}
 	data->sb[0] = data->sa[0];
 	pos = 0;
-	while (pos <= data->sia - 1)
+	while (pos < data->sia - 1)
 	{
 		data->sa[pos] = data->sa[pos + 1];
 		pos++;
 	}
+	data->sib += 1;
+	data->sia -= 1;
 	write(1, "pb\n", 3);
 }
 
@@ -80,6 +88,8 @@ void	swap(int *a, int *b)
 {
 	int	tmp;
 
+	if (!a || !b)
+		return ;
 	tmp = *a;
 	*a = *b;
 	*b = tmp;

@@ -37,6 +37,8 @@ void	rrr(t_list *data)
 	int	last;
 	int	pos;
 
+	if ((data->sia < 2 && data->sib < 2) || !data)
+		return ;
 	rrr_aux(data);
 	if (data->sib > 1)
 	{

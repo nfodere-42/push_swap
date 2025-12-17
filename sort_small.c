@@ -14,15 +14,15 @@
 
 void	sort_3(int *a, t_list *data)
 {
-	if (data->argc == 2 && a[0] > a[1])
-		sa(a);
+	if (data->sia == 2 && a[0] > a[1])
+		sa(data);
 	else if (a[0] < a[1] && a[1] > a[2] && a[0] < a[2])
 	{
 		rra(data);
-		sa(a);
+		sa(data);
 	}
 	else if (a[0] > a[1] && a[0] < a[2])
-		sa(a);
+		sa(data);
 	else if (a[0] < a[1] && a[0] > a[2])
 		rra(data);
 	else if (a[0] > a[1] && a[1] < a[2] && a[0] > a[2])
@@ -30,7 +30,7 @@ void	sort_3(int *a, t_list *data)
 	else if (a[0] > a[1] && a[1] > a[2])
 	{
 		ra(data);
-		sa(a);
+		sa(data);
 	}
 }
 
@@ -42,13 +42,13 @@ void	sort_4(int *a, t_list *data)
 			pb(data);
 		else if (a[1] < a[0] && a[1] < a[2] && a[1] < a[3])
 		{
-			sa(a);
+			sa(data);
 			pb(data);
 		}
 		else if (a[2] < a[0] && a[2] < a[1] && a[2] < a[3])
 		{
 			ra(data);
-			sa(a);
+			sa(data);
 			pb(data);
 		}
 		else
@@ -67,7 +67,7 @@ static int	sort_5_aux(int *a, t_list *data, int pos)
 	if (a[2] < a[0] && a[2] < a[1] && a[2] < a[3] && a[2] < a[4] && pos == 0)
 	{
 		ra(data);
-		sa(a);
+		sa(data);
 		pb(data);
 		pos++;
 	}
@@ -103,7 +103,7 @@ void	sort_5(int *a, t_list *data)
 		}
 		else if (a[1] < a[0] && a[1] < a[2] && a[1] < a[3] && a[1] < a[4])
 		{
-			sa(a);
+			sa(data);
 			pb(data);
 			pos++;
 		}
@@ -113,5 +113,5 @@ void	sort_5(int *a, t_list *data)
 	if (pos == 1)
 		pa(data);
 	if (pos == 1 && a[0] > a[1])
-		sa(a);
+		sa(data);
 }

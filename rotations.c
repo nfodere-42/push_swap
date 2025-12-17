@@ -16,6 +16,8 @@ void	ra(t_list *data)
 {
 	int	pos;
 
+	if (data->sia < 2 || !data)
+		return ;
 	pos = 0;
 	while (pos + 1 < data->sia)
 	{
@@ -29,6 +31,8 @@ void	rb(t_list *data)
 {
 	int	pos;
 
+	if (data->sib < 2 || !data)
+		return ;
 	pos = 0;
 	while (pos + 1 < data->sib)
 	{
@@ -42,6 +46,8 @@ void	rr(t_list *data)
 {
 	int	pos;
 
+	if ((data->sia < 2 && data->sib < 2) || !data)
+		return ;
 	pos = 0;
 	while (pos + 1 < data->sia)
 	{
@@ -61,6 +67,8 @@ void	rra(t_list *data)
 {
 	int	pos;
 
+	if (data->sia < 2 || !data)
+		return ;
 	pos = data->sia - 1;
 	while (pos > 0)
 	{
@@ -74,6 +82,8 @@ void	rrb(t_list *data)
 {
 	int	pos;
 
+	if (data->sib < 2 || !data)
+		return ;
 	pos = data->sib - 1;
 	while (pos > 0)
 	{
@@ -83,42 +93,4 @@ void	rrb(t_list *data)
 	write(1, "rrb\n", 4);
 }
 
-/*
-void	rrr_aux(t_list *data)
-{
-	int	last;
-	int	pos;
-
-	if (data->sia > 1)
-	{
-		last = data->sa[data->sia - 1];
-		pos = data->sia - 1;
-		while (pos > 0)
-		{
-			data->sa[pos] = data->sa[pos - 1];
-			pos--;
-		}
-		data->sa[0] = last;
-	}
-}
-
-void	rrr(t_list *data)
-{
-	int	last;
-	int	pos;
-
-	rrr_aux(data);
-	if (data->sib > 1)
-	{
-		last = data->sb[data->sib - 1];
-		pos = data->sib - 1;
-		while (pos > 0)
-		{
-			data->sb[pos] = data->sb[pos - 1];
-			pos--;
-		}
-		data->sb[0] = last;
-	}
-	write(1, "rrr\n", 4);
-}
-*/
+// [rotations_aux.c]...
