@@ -76,7 +76,7 @@ int	main(int argc, char **argv)
 {
 	t_list	*data;
 
-	if (argc == 1)
+	if (argc <= 1)
 		return (0);
 	data = malloc(sizeof(t_list));
 	if (!data)
