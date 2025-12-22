@@ -7,6 +7,6 @@ The push_swap project is part of the 42 curriculum and its goal is to design a C
 # Instructions to compile and use (Linux)
 To compile the push_swap project, simply navigate to the project folder, open a terminal, and run the make command. Thanks to the Makefile, the entire process is automated. After that, a file named **push_swap** will be created, which becomes an executable once you run `chmod +x push_swap`.
 
-To run push_swap, after completing the steps above, just type `./push_swap {unsorted numbers}` for example: `./push_swap 54 763 21 32 43 12 5` in the terminal while inside the same folder as the executable. The program will output the operations it performs. You can pipe the output into `| wc -l` to see how many operations were required for the numbers you provided.
+To run push_swap, after completing the steps above, just type `./push_swap {unsorted numbers}` in the terminal while inside the same folder as the executable. The program will output the operations it performs. You can pipe the output into `| wc -l` to see how many operations were required for the numbers you provided.
 
 ***This project has been created as part of the 42 curriculum by Néo Foderé de Frutos (nfodere-), a student at 42 Barcelona***
