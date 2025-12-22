@@ -1,8 +1,5 @@
 # Push Swap
-```
-*This project has been created as part of the 42 curriculum by nfodere-*
-```
-
+![](images/logo_push_swap.png)
 # Description
 
 The push_swap project is part of the 42 curriculum and its goal is to design a C program that sorts a list of integers using only a limited set of operations on two stacks: A and B. The challenge lies in the fact that you cannot directly use classic sorting algorithms such as qsort or sort; instead, you must implement basic stack‑manipulation operations (swap, push, rotate, reverse rotate...) and combine them strategically to achieve the correct order with the smallest possible number of moves.
