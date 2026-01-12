@@ -29,4 +29,4 @@ The Push Swap project is part of the 42 curriculum and its goal is to design a C
 
 `src/stack.c`: Functions for sort stacks directly **(sa, sb, pa, pb...)**.
 
-***This project has been created as part of the 42 curriculum by Néo Foderé de Frutos (nfodere-), a student at 42 Barcelona***
+***This project has been created as part of the 42 curriculum by Néo Foderé de Frutos (nfodere-), student at 42 Barcelona***
